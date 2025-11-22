@@ -4,4 +4,4 @@ WORKDIR /app
 COPY ./app/requeriments.txt requeriments.txt
 RUN pip install --no-cache-dir --upgrade -r requeriments.txt
 COPY ./app .
-CMD ["flask", "run"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=3000"]

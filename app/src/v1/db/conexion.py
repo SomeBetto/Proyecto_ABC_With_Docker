@@ -12,6 +12,7 @@ class conexion():
                 user='postgres',
                 password='passw0rd'
             )
+            self.conn.autocommit = True
             self.cur = self.conn.cursor()
             print("Conexión exitosa a la base de datos")
         except (Exception, psycopg2.Error) as error:
